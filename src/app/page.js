@@ -24,3 +24,43 @@ const Home = () => {
 };
 
 export default Home;
+/*// pages/index.js
+import React, { useEffect, useState } from 'react';
+
+const Home = () => {
+  const [teamStats, setTeamStats] = useState(null);
+
+  useEffect(() => {
+    // Fetch data from your backend API endpoint
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/team-stats'); // replace with your actual API endpoint
+        const data = await response.json();
+        setTeamStats(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h1>Team Statistics</h1>
+      {teamStats ? (
+        <>
+          <p>Total Teams Registered: {teamStats.totalTeams}</p>
+          <p>4-member Teams: {teamStats.teamsOf4}</p>
+          <p>3-member Teams: {teamStats.teamsOf3}</p>
+          <p>2-member Teams: {teamStats.teamsOf2}</p>
+          <p>1-member Teams: {teamStats.teamsOf1}</p>
+        </>
+      ) : (
+        <p>Loading team statistics...</p>
+      )}
+    </div>
+  );
+};
+
+export default Home;*/
